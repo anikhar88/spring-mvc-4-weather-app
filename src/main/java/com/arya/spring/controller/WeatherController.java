@@ -39,7 +39,14 @@ public class WeatherController {
 	}
 
 	// API :: http://localhost:8080/weather-app/weather.htm
-
+	/**
+	 * This method handles the weather endpoint to check the weather information for the provided city in the request parameter
+	 * @param req : HttpServletRequest
+	 * @param res : HttpServletResponse
+	 * @param model : Spring Model to set the required model information into the servlet response.
+	 * @return : returns the String which indicates the view to be displayed on the browser.
+	 * @throws EmptyCityNameException : Throws an exception if city is null or empty.
+	 */
 	@RequestMapping(value = "weather", method = RequestMethod.POST)
 	public String weather(HttpServletRequest req, HttpServletResponse res, Model model) throws EmptyCityNameException {
 
